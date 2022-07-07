@@ -1,4 +1,4 @@
-package com.emrekaraman.ayrotek.utilities;
+package com.emrekaraman.product.core.utilities;
 
 
 public class Result {

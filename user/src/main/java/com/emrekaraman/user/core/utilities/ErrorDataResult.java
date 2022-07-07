@@ -1,4 +1,4 @@
-package com.emrekaraman.ayrotek.utilities;
+package com.emrekaraman.user.core.utilities;
 
 public class ErrorDataResult<T> extends  DataResult<T>{
 
