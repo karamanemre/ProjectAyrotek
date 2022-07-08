@@ -3,7 +3,8 @@ package com.emrekaraman.product.ws;
 
 
 import com.emrekaraman.product.business.dto.ProductDto;
-import com.emrekaraman.product.business.services.ProductService;
+import com.emrekaraman.product.business.abstracts.ProductService;
+import com.emrekaraman.product.business.dto.SellerDto;
 import com.emrekaraman.product.core.utilities.DataResult;
 import com.emrekaraman.product.core.utilities.Result;
 import org.springframework.http.HttpStatus;
@@ -68,6 +69,11 @@ public class ProductWs {
             return ResponseEntity.ok(response);
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
+
+    @GetMapping("getBySellerId/{id}")
+    public DataResult<SellerDto> getBySellerId(@PathVariable String id) {
+        return productService.getBySellerId(id);
     }
 
 }

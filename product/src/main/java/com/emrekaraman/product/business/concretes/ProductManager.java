@@ -1,7 +1,9 @@
 package com.emrekaraman.product.business.concretes;
 
 import com.emrekaraman.product.business.dto.ProductDto;
-import com.emrekaraman.product.business.services.ProductService;
+import com.emrekaraman.product.business.dto.SellerDto;
+import com.emrekaraman.product.business.abstracts.ProductService;
+import com.emrekaraman.product.client.abstracts.SellerClientService;
 import com.emrekaraman.product.core.constants.Messages;
 import com.emrekaraman.product.core.utilities.*;
 import com.emrekaraman.product.dao.ProductDao;
@@ -16,9 +18,11 @@ import java.util.Optional;
 public class ProductManager implements ProductService {
 
     private final ProductDao productDao;
+    private final SellerClientService sellerClientService;
 
-    public ProductManager(ProductDao productDao) {
+    public ProductManager(ProductDao productDao, SellerClientService sellerClientService) {
         this.productDao = productDao;
+        this.sellerClientService = sellerClientService;
     }
 
     @Override
@@ -85,6 +89,15 @@ public class ProductManager implements ProductService {
         }catch (Exception ex){
             return new ErrorDataResult(ex.getMessage());
         }
+    }
+
+    @Override
+    public DataResult<SellerDto> getBySellerId(String id) {
+        SellerDto sellerDto = sellerClientService.getSeller(id).getBody();
+        if (sellerDto != null){
+            return new SuccessDataResult(sellerDto,Messages.SUCCESS);
+        }
+        return new ErrorDataResult(Messages.FAILED);
     }
 
     public boolean existById(Long id){
