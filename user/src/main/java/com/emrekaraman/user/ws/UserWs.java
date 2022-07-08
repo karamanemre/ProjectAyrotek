@@ -2,9 +2,7 @@ package com.emrekaraman.user.ws;
 
 import com.emrekaraman.user.business.dtos.UserDto;
 import com.emrekaraman.user.business.services.UserService;
-import com.emrekaraman.user.core.constants.Messages;
 import com.emrekaraman.user.core.utilities.DataResult;
-import com.emrekaraman.user.core.utilities.ErrorDataResult;
 import com.emrekaraman.user.core.utilities.Result;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,13 +28,13 @@ public class UserWs {
     }
 
     @GetMapping("/getById/{id}")
-    public ResponseEntity<DataResult<UserDto>> getById(@PathVariable Long id){
+    public ResponseEntity<UserDto> getById(@PathVariable Long id){
 
         DataResult<UserDto> result = userService.getById(id);
         if (result.isSuccess()){
-            return ResponseEntity.ok(result);
+            return ResponseEntity.ok(result.getData());
         }
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result.getData());
     }
 
     @GetMapping("/getAll")

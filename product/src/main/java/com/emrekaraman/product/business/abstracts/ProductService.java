@@ -5,6 +5,7 @@ import com.emrekaraman.product.business.dto.ProductDto;
 import com.emrekaraman.product.business.dto.SellerDto;
 import com.emrekaraman.product.core.utilities.DataResult;
 import com.emrekaraman.product.core.utilities.Result;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 public interface ProductService {
 
@@ -13,5 +14,5 @@ public interface ProductService {
     Result update(ProductDto productDto);
     DataResult<ProductDto> getById(Long id);
     DataResult<ProductDto> getAll();
-    DataResult<SellerDto> getBySellerId(String id);
+    DataResult<SellerDto> getSeller(String id);
 }

@@ -1,6 +1,7 @@
 package com.emrekaraman.product.business.concretes;
 
 import com.emrekaraman.product.business.dto.ProductDto;
+import com.emrekaraman.product.business.dto.ProductGetDto;
 import com.emrekaraman.product.business.dto.SellerDto;
 import com.emrekaraman.product.business.abstracts.ProductService;
 import com.emrekaraman.product.client.abstracts.SellerClientService;
@@ -8,6 +9,7 @@ import com.emrekaraman.product.core.constants.Messages;
 import com.emrekaraman.product.core.utilities.*;
 import com.emrekaraman.product.dao.ProductDao;
 import com.emrekaraman.product.entity.Product;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,10 +21,12 @@ public class ProductManager implements ProductService {
 
     private final ProductDao productDao;
     private final SellerClientService sellerClientService;
+    private final ModelMapper modelMapper;
 
-    public ProductManager(ProductDao productDao, SellerClientService sellerClientService) {
+    public ProductManager(ProductDao productDao, SellerClientService sellerClientService, ModelMapper modelMapper) {
         this.productDao = productDao;
         this.sellerClientService = sellerClientService;
+        this.modelMapper = modelMapper;
     }
 
     @Override
@@ -70,7 +74,9 @@ public class ProductManager implements ProductService {
 
         try {
             Optional<Product> product = Optional.of(productDao.getById(id));
-            ProductDto response = modelToDto(product.get());
+            ProductGetDto response = modelMapper.map(product.get(),ProductGetDto.class);
+            String sellerName = getSeller(String.valueOf(product.get().getSellerId())).getData().getFullname();
+            response.setSellerName(sellerName);
             return product.get() != null ? new SuccessDataResult(response,Messages.SUCCESS) : new ErrorDataResult(Messages.FAILED);
         }catch (Exception ex){
             return new ErrorDataResult(ex.getMessage());
@@ -92,12 +98,8 @@ public class ProductManager implements ProductService {
     }
 
     @Override
-    public DataResult<SellerDto> getBySellerId(String id) {
-        SellerDto sellerDto = sellerClientService.getSeller(id).getBody();
-        if (sellerDto != null){
-            return new SuccessDataResult(sellerDto,Messages.SUCCESS);
-        }
-        return new ErrorDataResult(Messages.FAILED);
+    public DataResult<SellerDto> getSeller(String id){
+        return sellerClientService.getSeller(id);
     }
 
     public boolean existById(Long id){

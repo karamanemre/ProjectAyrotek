@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b8d29fd-16ed-4357-b6a4-20c89376966e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/dto/SellerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/abstracts/SellerClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/concretes/SellerClientManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/core/constants/Beans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/business/dtos/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/core/constants/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8475693d-b6bd-4c83-997d-c9904796345a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8475693d-b6bd-4c83-997d-c9904796345a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8475693d-b6bd-4c83-997d-c9904796345a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8475693d-b6bd-4c83-997d-c9904796345a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="4b8d29fd-16ed-4357-b6a4-20c89376966e" name="Default Changelist" comment="&#10;rest template integration was made for product service">
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/dto/ProductGetDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/abstracts/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/abstracts/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/concretes/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/concretes/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/business/abstracts/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/abstracts/SellerClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/abstracts/SellerClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/concretes/SellerClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/concretes/SellerClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/core/constants/Beans.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/core/constants/Beans.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/ws/ProductWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/ws/ProductWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/business/concretes/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/business/concretes/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/business/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/business/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/ws/UserWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/ws/UserWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +141,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductApplication">
+  <component name="RunManager" selected="Spring Boot.UserApplication">
     <configuration name="AyrotekApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
       <extension name="coverage">
@@ -247,7 +234,8 @@
       <workItem from="1657224098729" duration="1551000" />
       <workItem from="1657225659608" duration="4073000" />
       <workItem from="1657266491587" duration="2266000" />
-      <workItem from="1657286194686" duration="5540000" />
+      <workItem from="1657286194686" duration="5581000" />
+      <workItem from="1657305358448" duration="4118000" />
     </task>
     <task id="LOCAL-00001" summary="docker compose settings added">
       <created>1657185979463</created>
@@ -291,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657229085444</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="rest template configuration edited">
+      <created>1657291775419</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657291775419</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +299,9 @@
     <MESSAGE value="revize (spring.cloud.compatibility-verifier.enabled=false)" />
     <MESSAGE value="product module code refactoring" />
     <MESSAGE value="user module created" />
-    <option name="LAST_COMMIT_MESSAGE" value="user module created" />
+    <MESSAGE value="rest template configuration edited" />
+    <MESSAGE value="&#10;rest template integration was made for product service" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;rest template integration was made for product service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="591" y="215" width="800" height="684" key="#Assign_Data_Sources" timestamp="1657192936589">
@@ -334,79 +331,80 @@
     </state>
     <state x="2552" y="259" width="645" height="568" key="#resources:_Compose_Deployment/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657180497398" />
     <state x="680" y="280" width="621" height="560" key="#resources:_Compose_Deployment/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657227283745" />
-    <state x="2638" y="290" width="1037" height="725" key="#xdebugger.evaluate" timestamp="1657291735750">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="383" y="310" width="1459" height="576" key="#xdebugger.evaluate" timestamp="1657308393966">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="2638" y="290" width="1037" height="725" key="#xdebugger.evaluate/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291735750" />
-    <state x="2425" y="106" width="866" height="854" key="CommitChangelistDialog2" timestamp="1657291763752">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="383" y="310" width="1459" height="576" key="#xdebugger.evaluate/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657308393966" />
+    <state x="558" y="130" width="1238" height="854" key="CommitChangelistDialog2" timestamp="1657309394718">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="2425" y="106" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291763752" />
-    <state x="558" y="130" width="866" height="854" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657229085360" />
+    <state x="2425" y="106" width="1238" height="854" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291775302" />
+    <state x="558" y="130" width="866" height="854" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309394718" />
     <state x="2638" y="291" width="424" height="491" key="FileChooserDialogImpl" timestamp="1657183231667">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2638" y="291" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657183231667" />
-    <state width="1546" height="259" key="GridCell.Tab.0.bottom" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1485" height="250" key="GridCell.Tab.0.bottom" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.0.center" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777504" />
+    <state width="1485" height="250" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.0.center" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.0.left" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777504" />
+    <state width="1485" height="250" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.0.left" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.0.right" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777504" />
+    <state width="1485" height="250" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.0.right" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.1.bottom" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777504" />
+    <state width="1485" height="250" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.1.bottom" timestamp="1657309296122">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.1.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.1.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.1.center" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.1.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.1.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296122" />
+    <state width="1485" height="250" key="GridCell.Tab.1.center" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.1.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.1.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.1.left" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.1.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.1.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.1.left" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.1.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.1.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.1.right" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.1.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777504" />
+    <state width="1485" height="250" key="GridCell.Tab.1.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.1.right" timestamp="1657309296121">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.1.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="327" key="GridCell.Tab.1.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657286245126" />
-    <state width="1546" height="259" key="GridCell.Tab.2.bottom" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.1.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.1.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309296121" />
+    <state width="1485" height="250" key="GridCell.Tab.2.bottom" timestamp="1657309265285">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.2.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="161" key="GridCell.Tab.2.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657228604006" />
-    <state width="1546" height="259" key="GridCell.Tab.2.center" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.2.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.2.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309265285" />
+    <state width="1485" height="250" key="GridCell.Tab.2.center" timestamp="1657309265285">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.2.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="161" key="GridCell.Tab.2.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657228604006" />
-    <state width="1546" height="259" key="GridCell.Tab.2.left" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.2.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.2.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309265285" />
+    <state width="1485" height="250" key="GridCell.Tab.2.left" timestamp="1657309265285">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.2.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="161" key="GridCell.Tab.2.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657228604006" />
-    <state width="1546" height="259" key="GridCell.Tab.2.right" timestamp="1657291739919">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1546" height="259" key="GridCell.Tab.2.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.2.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309265285" />
+    <state width="1485" height="250" key="GridCell.Tab.2.right" timestamp="1657309265285">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1546" height="259" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291739919" />
-    <state width="1485" height="161" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657228604006" />
+    <state width="1546" height="259" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1657291777505" />
+    <state width="1485" height="250" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1657309265285" />
     <state width="276" height="488" key="HiddenNamespacesPopup" timestamp="1657268554640">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -444,18 +442,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user/src/main/java/com/emrekaraman/user/ws/UserWs.java</url>
-          <line>24</line>
+          <line>22</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/concretes/SellerClientManager.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/product/src/main/java/com/emrekaraman/product/client/concretes/SellerClientManager.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="6" />
+          <line>29</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

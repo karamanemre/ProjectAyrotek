@@ -1,8 +1,8 @@
 package com.emrekaraman.product.client.abstracts;
 
 import com.emrekaraman.product.business.dto.SellerDto;
-import org.springframework.http.ResponseEntity;
+import com.emrekaraman.product.core.utilities.DataResult;
 
 public interface SellerClientService {
-    ResponseEntity<SellerDto> getSeller(String sellerId);
+    DataResult<SellerDto> getSeller(String sellerId);
 }
