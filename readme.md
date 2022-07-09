@@ -1,4 +1,4 @@
-# Innova Java Spring Final Project
+# Ayrotek Project
 
 [<h2>Click for Frontend part](https://github.com/karamanemre/ProjectAyrotekFront)
 
