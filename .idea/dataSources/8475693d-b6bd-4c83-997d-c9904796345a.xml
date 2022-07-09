@@ -3,26 +3,28 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.17">
     <root id="1">
       <ServerVersion>14.4</ServerVersion>
-      <StartupTime>1657286131</StartupTime>
+      <StartupTime>1657347580</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13757</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>744</IntrospectionStateNumber>
+      <IntrospectionStateNumber>765</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16385|16386|1
+sequence|table|16395|16396|1
+sequence|table|16402|16403|1
 </Relations>
     </database>
     <database id="3" parent="1" name="products">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>743</IntrospectionStateNumber>
+      <IntrospectionStateNumber>764</IntrospectionStateNumber>
     </database>
-    <database id="4" parent="1" name="users">
-      <ObjectId>16394</ObjectId>
+    <database id="4" parent="1" name="sellers">
+      <ObjectId>16409</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>746</IntrospectionStateNumber>
+      <IntrospectionStateNumber>767</IntrospectionStateNumber>
     </database>
     <role id="5" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
@@ -82,7 +84,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>745</IntrospectionStateNumber>
+      <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="20" parent="2" name="heap">
@@ -318,12 +320,38 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="51" parent="19" name="product">
+    <sequence id="51" parent="19" name="sellers_id_seq">
+      <ObjectId>16402</ObjectId>
+      <StateNumber>754</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="52" parent="19" name="users_id_seq">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>747</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="53" parent="19" name="product">
       <ObjectId>16386</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>740</StateNumber>
     </table>
-    <column id="52" parent="51" name="id">
+    <table id="54" parent="19" name="sellers">
+      <ObjectId>16403</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>754</StateNumber>
+    </table>
+    <table id="55" parent="19" name="users">
+      <ObjectId>16396</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>747</StateNumber>
+    </table>
+    <column id="56" parent="53" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -331,43 +359,99 @@
       <DefaultExpression>nextval(&apos;product_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="53" parent="51" name="description">
+    <column id="57" parent="53" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>740</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="51" name="name">
+    <column id="58" parent="53" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>740</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="55" parent="51" name="price">
+    <column id="59" parent="53" name="price">
       <Position>4</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>740</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="56" parent="51" name="seller_id">
+    <column id="60" parent="53" name="seller_id">
       <Position>5</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>740</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="57" parent="51" name="product_pkey">
+    <index id="61" parent="53" name="product_pkey">
       <ObjectId>16392</ObjectId>
       <StateNumber>740</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="58" parent="51" name="product_pkey">
+    <key id="62" parent="53" name="product_pkey">
       <ObjectId>16393</ObjectId>
       <StateNumber>740</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>product_pkey</UnderlyingIndexName>
+    </key>
+    <column id="63" parent="54" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>754</StateNumber>
+      <DefaultExpression>nextval(&apos;sellers_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="64" parent="54" name="fullname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>754</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="65" parent="54" name="sellers_pkey">
+      <ObjectId>16407</ObjectId>
+      <StateNumber>754</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="66" parent="54" name="sellers_pkey">
+      <ObjectId>16408</ObjectId>
+      <StateNumber>754</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sellers_pkey</UnderlyingIndexName>
+    </key>
+    <column id="67" parent="55" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>747</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="68" parent="55" name="fullname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>747</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="69" parent="55" name="users_pkey">
+      <ObjectId>16400</ObjectId>
+      <StateNumber>747</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="70" parent="55" name="users_pkey">
+      <ObjectId>16401</ObjectId>
+      <StateNumber>747</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

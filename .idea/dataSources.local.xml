@@ -16,7 +16,7 @@
             </node>
             <node kind="database">
               <name qname="products" />
-              <name qname="users" />
+              <name qname="sellers" />
             </node>
           </node>
         </introspection-scope>
