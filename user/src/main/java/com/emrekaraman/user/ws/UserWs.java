@@ -28,7 +28,10 @@ public class UserWs {
 
     @PostMapping("/login")
     public ResponseEntity<DataResult<LoginResponseDto>> login(@RequestBody LoginRequestDto loginRequestDto){
-        return ResponseEntity.ok( userService.login(loginRequestDto));
+        if (userService.login(loginRequestDto).isSuccess()){
+            return ResponseEntity.ok( userService.login(loginRequestDto));
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
     @PostMapping("/save")
