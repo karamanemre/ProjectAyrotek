@@ -75,8 +75,9 @@ public class ProductManager implements ProductService {
         try {
             Optional<Product> product = Optional.of(productDao.getById(id));
             ProductGetDto response = modelMapper.map(product.get(),ProductGetDto.class);
-            String sellerName = getSeller(String.valueOf(product.get().getSellerId())).getData().getFullname();
-            response.setSellerName(sellerName);
+            SellerDto sellerDto = getSeller(String.valueOf(product.get().getSellerId())).getData();
+            response.setSellerName(sellerDto.getFullname());
+            response.setSellerId(Long.valueOf(sellerDto.getId()));
             return product.get() != null ? new SuccessDataResult(response,Messages.SUCCESS) : new ErrorDataResult(Messages.FAILED);
         }catch (Exception ex){
             return new ErrorDataResult(ex.getMessage());
@@ -84,12 +85,19 @@ public class ProductManager implements ProductService {
     }
 
     @Override
-    public DataResult<ProductDto> getAll() {
+    public DataResult<ProductGetDto> getAll() {
         try {
-            List<ProductDto> productDtos = new ArrayList<>();
+            List<ProductGetDto> productDtos = new ArrayList<>();
             List<Product> products = productDao.findAll();
+
+
             for (Product item : products){
-                productDtos.add(modelToDto(item));
+                SellerDto sellerDto = getSeller(String.valueOf(item.getSellerId())).getData();
+                ProductGetDto productGetDto = modelMapper.map(item,ProductGetDto.class);
+
+                productGetDto.setSellerId(sellerDto.getId());
+                productGetDto.setSellerName(sellerDto.getFullname());
+                productDtos.add(productGetDto);
             }
             return new SuccessDataResult(productDtos,Messages.SUCCESS);
         }catch (Exception ex){

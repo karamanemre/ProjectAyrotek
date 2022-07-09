@@ -2,6 +2,7 @@ package com.emrekaraman.product.business.abstracts;
 
 
 import com.emrekaraman.product.business.dto.ProductDto;
+import com.emrekaraman.product.business.dto.ProductGetDto;
 import com.emrekaraman.product.business.dto.SellerDto;
 import com.emrekaraman.product.core.utilities.DataResult;
 import com.emrekaraman.product.core.utilities.Result;
@@ -13,6 +14,6 @@ public interface ProductService {
     Result delete(Long id);
     Result update(ProductDto productDto);
     DataResult<ProductDto> getById(Long id);
-    DataResult<ProductDto> getAll();
+    DataResult<ProductGetDto> getAll();
     DataResult<SellerDto> getSeller(String id);
 }

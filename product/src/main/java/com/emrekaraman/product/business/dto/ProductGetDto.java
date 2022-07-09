@@ -13,4 +13,5 @@ public class ProductGetDto {
     private String description;
     private Double price;
     private String sellerName;
+    private Long sellerId;
 }

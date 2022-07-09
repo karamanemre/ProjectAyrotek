@@ -4,6 +4,7 @@ package com.emrekaraman.product.ws;
 
 import com.emrekaraman.product.business.dto.ProductDto;
 import com.emrekaraman.product.business.abstracts.ProductService;
+import com.emrekaraman.product.business.dto.ProductGetDto;
 import com.emrekaraman.product.business.dto.SellerDto;
 import com.emrekaraman.product.core.utilities.DataResult;
 import com.emrekaraman.product.core.utilities.Result;
@@ -63,9 +64,9 @@ public class ProductWs {
     }
 
     @GetMapping("getAll")
-    public ResponseEntity<DataResult<ProductDto>> getAll(){
+    public ResponseEntity<DataResult<ProductGetDto>> getAll(){
 
-        DataResult<ProductDto> response = productService.getAll();
+        DataResult<ProductGetDto> response = productService.getAll();
         if (response.isSuccess()){
             return ResponseEntity.ok(response);
         }
