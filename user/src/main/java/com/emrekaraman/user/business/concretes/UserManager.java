@@ -27,6 +27,9 @@ public class UserManager implements UserService {
     @Override
     public Result save(UserDto userDto) {
         try {
+            if (userDao.existsByEmail(userDto.getEmail())) {
+                return new ErrorDataResult(Messages.MUST_BE_UNIQUE);
+            }
             Seller seller = modelMapper.map(userDto,Seller.class);
             seller.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
             userDao.save(seller);

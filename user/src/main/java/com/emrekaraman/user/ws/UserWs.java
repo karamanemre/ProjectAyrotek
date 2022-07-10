@@ -5,6 +5,7 @@ import com.emrekaraman.user.business.dtos.LoginRequestDto;
 import com.emrekaraman.user.business.dtos.LoginResponseDto;
 import com.emrekaraman.user.business.dtos.UserDto;
 import com.emrekaraman.user.business.services.UserService;
+import com.emrekaraman.user.core.constants.Messages;
 import com.emrekaraman.user.core.utilities.DataResult;
 import com.emrekaraman.user.core.utilities.Result;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,8 @@ public class UserWs {
         if (result.isSuccess()){
             return ResponseEntity.ok(result);
         }
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result);
+        return result.getMessage() == Messages.MUST_BE_UNIQUE ?
+                ResponseEntity.status(HttpStatus.CONFLICT).body(result) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result);
     }
 
     @GetMapping("/getById/{id}")

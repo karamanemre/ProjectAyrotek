@@ -50,7 +50,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET,"/api/userws/getAll").authenticated()
+                .antMatchers(HttpMethod.GET,"/api/userws/delete").authenticated()
                 .and()
                 .authorizeRequests()
                 .anyRequest()
