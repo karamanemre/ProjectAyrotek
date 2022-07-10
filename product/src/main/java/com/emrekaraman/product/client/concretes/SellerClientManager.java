@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-@RestController
-@RequestMapping(value = "/api/productws")
 public class SellerClientManager implements SellerClientService {
 
     private final String URL = "http://localhost:8085/api/userws/getById/";
@@ -28,7 +26,6 @@ public class SellerClientManager implements SellerClientService {
     }
 
     @Override
-    @GetMapping("gets/{sellerId}")
     public DataResult<SellerDto> getSeller(@PathVariable Long sellerId) {
         Gson gson = new Gson();
         String res = restTemplate.getForObject(URL+sellerId, String.class);
