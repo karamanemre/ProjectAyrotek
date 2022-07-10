@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class SellerDto {
     private Long id;
     private String fullname;
+    private String email;
+    private String password;
 }

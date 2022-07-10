@@ -44,9 +44,9 @@ public class UserWs {
     }
 
     @GetMapping("/getById/{id}")
-    public ResponseEntity<DataResult<UserDto>> getById(@PathVariable Long id){
+    public ResponseEntity<DataResult<UserDto>> getById(@PathVariable String id){
 
-        DataResult<UserDto> result = userService.getById(id);
+        DataResult<UserDto> result = userService.getById(Long.parseLong(id));
         if (result.isSuccess()){
             return ResponseEntity.ok(result);
         }

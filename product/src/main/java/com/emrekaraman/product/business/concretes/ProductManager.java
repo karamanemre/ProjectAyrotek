@@ -32,9 +32,14 @@ public class ProductManager implements ProductService {
     @Override
     public Result save(ProductDto productDto) {
         try {
-            Product product = dtoToModel(productDto);
-            productDao.save(product);
-            return new SuccessResult(Messages.SUCCESS);
+            SellerDto sellerDto = getSeller(productDto.getSellerId()).getData();
+            if (sellerDto != null){
+                Product product = dtoToModel(productDto);
+                product.setSellerId(productDto.getSellerId());
+                productDao.save(product);
+                return new SuccessResult(Messages.SUCCESS);
+            }
+            return new ErrorResult(Messages.SELLER_NOT_FOUND);
         }catch (Exception ex){
             return new ErrorResult(ex.getMessage());
         }
@@ -75,7 +80,7 @@ public class ProductManager implements ProductService {
         try {
             Optional<Product> product = Optional.of(productDao.getById(id));
             ProductGetDto response = modelMapper.map(product.get(),ProductGetDto.class);
-            SellerDto sellerDto = getSeller(String.valueOf(product.get().getSellerId())).getData();
+            SellerDto sellerDto = getSeller(product.get().getSellerId()).getData();
             response.setSellerName(sellerDto.getFullname());
             response.setSellerId(Long.valueOf(sellerDto.getId()));
             return product.get() != null ? new SuccessDataResult(response,Messages.SUCCESS) : new ErrorDataResult(Messages.FAILED);
@@ -92,7 +97,7 @@ public class ProductManager implements ProductService {
 
 
             for (Product item : products){
-                SellerDto sellerDto = getSeller(String.valueOf(item.getSellerId())).getData();
+                SellerDto sellerDto = getSeller(item.getSellerId()).getData();
                 ProductGetDto productGetDto = modelMapper.map(item,ProductGetDto.class);
 
                 productGetDto.setSellerId(sellerDto.getId());
@@ -106,7 +111,7 @@ public class ProductManager implements ProductService {
     }
 
     @Override
-    public DataResult<SellerDto> getSeller(String id){
+    public DataResult<SellerDto> getSeller(Long id) {
         return sellerClientService.getSeller(id);
     }
 
