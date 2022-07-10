@@ -1,8 +1,9 @@
-# Innova Java Spring Final Project
+# Ayrotek Project
 
 [<h2>Click for Frontend part](https://github.com/karamanemre/ProjectAyrotekFront)
 
 ## Getting Started
+
 Ayrotek microservices project
 
 
@@ -67,7 +68,7 @@ Gateway service incoming requests It directs requests to related services accord
 
 ## Project Hierarchy
 
-<img width="100%" src="https://cloudinary.com/console/c-d8d46fecf0716243ca0acf71be8b5f/media_library/folders/bf9a98d4288976b4aa3c7b29d590fa8b62" />
+<img width="100%" src="https://res.cloudinary.com/dlluer8c0/image/upload/v1657367012/github-images/vlo0e8kxtvkpo4ydakum.png" />
 
 
 
