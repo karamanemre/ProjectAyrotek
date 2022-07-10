@@ -33,13 +33,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         this.jwtTokenFilter = jwtTokenFilter;
     }
 
-
-    public Authentication authenticationManager(LoginRequestDto loginRequestDto) throws Exception {
-        return super.authenticationManagerBean().authenticate(new UsernamePasswordAuthenticationToken(loginRequestDto.getEmail(),loginRequestDto.getPassword()));
-    }
-
-
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
@@ -50,7 +43,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET,"/api/userws/delete").authenticated()
+                .antMatchers(HttpMethod.POST,"/api/userws/delete").authenticated()
+                .antMatchers(HttpMethod.POST,"/api/userws/update").authenticated()
                 .and()
                 .authorizeRequests()
                 .anyRequest()

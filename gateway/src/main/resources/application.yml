@@ -1,0 +1,25 @@
+server:
+  port: 5555
+
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    gateway:
+      routes:
+        - id: user
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/api/userws/**
+        - id: product
+          uri: http://localhost:8084/
+          predicates:
+            - Path=/api/productws/**
+  main:
+    web-application-type: reactive
+
+#logging:
+#  file:
+#    name: ./Gateway/log/gateway.log
+#  level:
+#    root: info
