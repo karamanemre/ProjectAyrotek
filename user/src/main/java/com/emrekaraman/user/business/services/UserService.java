@@ -13,6 +13,5 @@ public interface UserService {
     Result update(UserDto productDto);
     DataResult<UserDto> getById(Long id);
     DataResult<UserDto> getAll();
-    DataResult<LoginResponseDto> login(LoginRequestDto loginRequestDto);
 
 }

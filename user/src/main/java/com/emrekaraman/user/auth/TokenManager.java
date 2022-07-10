@@ -20,7 +20,6 @@ public class TokenManager {
         String jws = Jwts.builder()
                 .setSubject(email)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis()+JWT_TOKEN_VALIDITY))
                 .signWith(key)
                 .compact();
         return jws;
