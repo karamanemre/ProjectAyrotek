@@ -17,6 +17,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/api/productws")
+@CrossOrigin
 public class ProductWs {
 
     private final ProductService productService;
