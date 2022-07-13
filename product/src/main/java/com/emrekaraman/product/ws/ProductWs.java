@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping(value = "/api/productws")
 public class ProductWs {
@@ -24,7 +26,7 @@ public class ProductWs {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Result> save(@RequestBody ProductDto productDto){
+    public ResponseEntity<Result> save(@RequestBody @Valid ProductDto productDto){
 
         Result response = productService.save(productDto);
         if (response.isSuccess()){

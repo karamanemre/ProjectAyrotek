@@ -34,6 +34,6 @@ public class SellerClientManager implements SellerClientService {
             SellerDto sellerDto = modelMapper.map(dataResult.getData(),SellerDto.class);
             return new SuccessDataResult(sellerDto, Messages.SUCCESS);
         }
-        return new ErrorDataResult(sellerDto, Messages.SUCCESS);
+        return new ErrorDataResult(null, Messages.SUCCESS);
     }
 }

@@ -54,6 +54,7 @@ public class UserWs {
     }
 
     @GetMapping("/getAll")
+    //@PreAuthorize("#userUpdateDto.getId() == #userDetailsManager.user.id") //SpEL(Spring Expression Language) (userDetailsManager yerine "principal.username" denebilir)
     public ResponseEntity<DataResult<UserDto>> getAll(){
 
         DataResult<UserDto> result = userService.getAll();
