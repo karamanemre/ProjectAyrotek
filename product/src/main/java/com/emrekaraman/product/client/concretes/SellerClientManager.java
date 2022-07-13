@@ -26,12 +26,12 @@ public class SellerClientManager implements SellerClientService {
     }
 
     @Override
-    public DataResult<SellerDto> getSeller(@PathVariable Long sellerId) {
+    public DataResult<SellerDto> getSeller(Long sellerId) {
         Gson gson = new Gson();
         String res = restTemplate.getForObject(URL+sellerId, String.class);
         DataResult dataResult = gson.fromJson(res,DataResult.class);
-        SellerDto sellerDto = modelMapper.map(dataResult.getData(),SellerDto.class);
         if (dataResult.getData() != null){
+            SellerDto sellerDto = modelMapper.map(dataResult.getData(),SellerDto.class);
             return new SuccessDataResult(sellerDto, Messages.SUCCESS);
         }
         return new ErrorDataResult(sellerDto, Messages.SUCCESS);

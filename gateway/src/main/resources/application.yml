@@ -6,6 +6,13 @@ spring:
     compatibility-verifier:
       enabled: false
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
       routes:
         - id: user
           uri: http://localhost:8085/
@@ -17,6 +24,18 @@ spring:
             - Path=/api/productws/**
   main:
     web-application-type: reactive
+
+
+#    spring:
+#    cloud:
+#    gateway:
+#    globalcors:
+#    corsConfigurations:
+#    '[/**]':
+#    allowedOrigins: "*"
+#    allowedMethods:
+#      - GET
+#      - POST
 
 #logging:
 #  file:
