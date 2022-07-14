@@ -32,17 +32,14 @@ spring:
   main:
     web-application-type: reactive
 
-
-#    spring:
-#    cloud:
-#    gateway:
-#    globalcors:
-#    corsConfigurations:
-#    '[/**]':
-#    allowedOrigins: "*"
-#    allowedMethods:
-#      - GET
-#      - POST
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9999/eureka/
+  instance:
+    hostname: localhost
 
 #logging:
 #  file:
